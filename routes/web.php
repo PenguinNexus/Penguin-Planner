@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Task;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    //$tasks = Task::orderBy('created_at', 'asc')->get();
+
+    return view('welcome', [
+        //'tasks' => $tasks
+    ]);
 });
